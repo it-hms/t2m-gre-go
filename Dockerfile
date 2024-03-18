@@ -14,7 +14,7 @@ COPY *.go ./
 RUN CGO_ENABLED=1 GOOS=linux go build -C t2mgre
 
 
-FROM ubuntu:jammy as release-stage 
+FROM debian:bookworm-slim as release-stage 
 
 # Install openvpn
 RUN apt-get update && \ 
