@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.21 as build-stage
+FROM golang:1.22 as build-stage
 
 WORKDIR /work
 RUN apt-get update && apt-get -y install libpcap-dev
